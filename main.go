@@ -21,5 +21,6 @@ func main() {
 	r.Handle("DELETE","/delete", func(c *gin.Context) {
 		c.String(200,"delete")
 	})
-	r.Run()
+	// 启动gin服务，默认情况下是8080端口，当然也可以自定义端口号
+	r.Run("127.0.0.1:80")
 }
